@@ -5,7 +5,6 @@
     padding:0;
     box-sizing:border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    transition: .5s linear;
     border:none;
     outline:none;
     text-decoration: none;
@@ -37,9 +36,12 @@ section{
     padding:.9rem 3.5rem;
     cursor:pointer;
     font-size:1.7rem;
+    transition: .2s linear;
 }
 .btn:hover{
     background:orange;
+    transform: translateY(-2px);
+    box-shadow: 0.5rem 1rem rgba(0,0,0,0.1);
 }
 html
 {
@@ -66,7 +68,11 @@ header .logo
     font-size: 3rem;
     color:#333;
     font-weight:bolder;
+    transition: .2s linear;
 }
+header .logo:hover {
+     opacity: 0.7; 
+ }
 header .logo span
 {
     color:orange;
@@ -76,19 +82,24 @@ header .navbar a
     font-size:2rem;
     padding:0 1.5rem;
     color:#666;
+    transition: .2s linear;
 }
 header .navbar a:hover
 {
     color:orange;
+    transform: translateY(-3px);
+    font-weight: bold;
 }
 header .icons a
 {
     font-size:2.5rem;
     color:#333;
     margin-left: 1.5rem;
+    transition: .2s linear;
 }
     header .icons a:hover{
         color:orange;
+        transform: scale(1.2);
     }
     header #toggler{
         display: none;
@@ -142,12 +153,20 @@ header .icons a
         position: relative;
     }
     
-     .about .row .video-container video{
+     .about .row .video-container video ,
+     .about .row .video-container img{
         width:100%;
         border:1.5rem solid #fff;
         border-radius: .5rem;
         box-shadow: 0.5rem 1rem rgba(0,0,0,0.1);
+        transition: .2s linear; 
      }
+     .about .row .video-container video:hover,
+     .about .row .video-container img:hover
+        {
+            transform: scale(1.03);
+            box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.2);
+        }
      .about .row .video-container h3{
         position:absolute;
         top:50%;
@@ -171,7 +190,5 @@ header .icons a
          padding: .5rem 0;
          padding-top:1rem;
          line-height: 1.5;
-    }
- 
-   
-        
+    } 
+  
