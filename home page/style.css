@@ -1,6 +1,7 @@
 
 *
 {
+
     margin:0;
     padding:0;
     box-sizing:border-box;
@@ -9,11 +10,9 @@
     outline:none;
     text-decoration: none;
     text-transform: capitalize;
-
 }
 section{
-    padding:2rem 9%;
-
+     padding:2rem 9%;
 }
 .heading{
     text-align: center;
@@ -23,10 +22,11 @@ section{
     margin: 0 1rem;
     background:rgb(252, 242, 233);
 }
+
 .heading span{
     color:orange;
-   
 }
+
 .btn{
     display: inline-block;
     margin-top: 1rem;
@@ -38,20 +38,22 @@ section{
     font-size:1.7rem;
     transition: .2s linear;
 }
+
 .btn:hover{
     background:orange;
-    transform: translateY(-2px);
-    box-shadow: 0.5rem 1rem rgba(0,0,0,0.1);
+    transform: translateY(-2px); 
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
 }
+
 html
 {
     font-size: 62.5%;
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
     overflow-x: hidden;
-
 }
 header
+
 {
     position:fixed;
     top:0;right:0;left:0;
@@ -71,8 +73,8 @@ header .logo
     transition: .2s linear;
 }
 header .logo:hover {
-     opacity: 0.7; 
- }
+    opacity: 0.7; 
+}
 header .logo span
 {
     color:orange;
@@ -87,7 +89,7 @@ header .navbar a
 header .navbar a:hover
 {
     color:orange;
-    transform: translateY(-3px);
+    transform: translateY(-3px); 
     font-weight: bold;
 }
 header .icons a
@@ -95,11 +97,12 @@ header .icons a
     font-size:2.5rem;
     color:#333;
     margin-left: 1.5rem;
-    transition: .2s linear;
+    transition: .2s linear; 
 }
     header .icons a:hover{
         color:orange;
         transform: scale(1.2);
+         
     }
     header #toggler{
         display: none;
@@ -113,6 +116,7 @@ header .icons a
         border:.1rem solid rgba(0,0,0,0.1);
         display:none;
     }
+
     .home
     {
         display:flex;
@@ -122,18 +126,20 @@ header .icons a
         background:url("/assets/hero.jpg") no-repeat;
         background-size:cover;
         background-position:center;
-
     }
+
     .home h3{
         font-size:5rem;
         color:#333;
     }
+
     .home span{
         font-size:3.5rem;
         color:orange;
         padding: 1rem 0;
         line-height:1.5;
     }
+
     .home p{
         font-size: 1.5rem;
         color:#999;
@@ -148,25 +154,23 @@ header .icons a
     padding:2rem 0;
     padding-bottom:3rem;
 }
+
 .about .row .video-container{
         flex:1 1 40rem;
         position: relative;
     }
-    
-     .about .row .video-container video ,
-     .about .row .video-container img{
+     .about .row .video-container video{
         width:100%;
         border:1.5rem solid #fff;
         border-radius: .5rem;
         box-shadow: 0.5rem 1rem rgba(0,0,0,0.1);
-        transition: .2s linear; 
-     }
-     .about .row .video-container video:hover,
-     .about .row .video-container img:hover
-        {
-            transform: scale(1.03);
-            box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.2);
-        }
+        transition: .2s linear;
+    }
+    .about .row .video-container video:hover{
+        transform: scale(1.03);
+        box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.2);
+    }
+
      .about .row .video-container h3{
         position:absolute;
         top:50%;
@@ -177,18 +181,18 @@ header .icons a
         text-align: center;
         mix-blend-mode:screen ;
     }
-     .about .row .content{
+    .about .row .content{
         flex: 1 1 40rem
      }
      .about .row .content h3{
         font-size: 3rem;
         color: #333;
      }
+
     .about .row .content p{
-         font-size:1.5rem;
+        font-size:1.5rem;
          color:#999;
          padding: .5rem 0;
          padding-top:1rem;
          line-height: 1.5;
-    } 
-  
+    }
