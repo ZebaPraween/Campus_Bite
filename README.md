@@ -56,13 +56,11 @@ It connects **students**, **faculty**, and **campus vendors** on a unified platf
 ---
 
 ## 🏗️ System Architecture
-[User Interface]
-↓
-Frontend
-↓
-Express REST API
-↓
-MySQL Database
+Campus Bite follows a three-tier architecture consisting of a  frontend, a Node.js + Express backend, and a MySQL database.
+The frontend provides an interactive user interface for students, faculty, and admins, handling tasks like login, menu browsing, cart management, and order tracking.
+The backend API acts as the communication bridge — processing user requests, managing authentication (JWT), handling order logic, and interacting with the database.
+The database layer stores structured data such as users, menu items, orders, and payments, ensuring data integrity and supporting efficient queries.
+This layered design enhances scalability, security, and maintainability, making the system modular and easy to extend for future features like real-time order tracking or AI-based recommendations.
 
 ---
 
@@ -73,29 +71,13 @@ MySQL Database
 git clone https://github.com/<your-org>/campus-bite.git
 cd campus-bite
 campus-bite/
-│
-├── backend/
-│   ├── server.js
-│   ├── routes/
-│   │   ├── authRoutes.js
-│   │   ├── menuRoutes.js
-│   │   ├── orderRoutes.js
-│   ├── models/
-│   │   ├── User.js
-│   │   ├── MenuItem.js
-│   │   ├── Order.js
-│   └── config/
-│       └── db.js
-│
-├── frontend/
-│   ├── src/
-│   │   ├── components/   → Navbar, Hero, FoodCard, Footer
-│   │   ├── context/      → AuthContext, CartContext
-│   │   ├── pages/        → Home, Menu, Cart, Checkout, Login, Admin
-│   │   └── App.jsx
-│   └── public/
-│
-└── README.md
+cd backend
+npm install
+npm start
+cd ../frontend
+npm install
+npm run dev
+---
 
 <div align="center">
 🌟 Campus Bite — Simplifying Campus Dining, One Click at a Time!
@@ -103,3 +85,4 @@ campus-bite/
 Made with ❤️ using HTML,CSS, Node.js, and MySQL
 
 </div> ```
+---
