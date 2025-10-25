@@ -22,7 +22,7 @@ section{
     color:#333;
     padding:1rem;
     margin: 0 1rem;
-    background:rgb(255, 51, 153,.05);
+    background:rgb(252, 242, 233);
 }
 .heading span{
     color:orange;
@@ -136,7 +136,8 @@ header .icons a
     flex-wrap: wrap;
     padding:2rem 0;
     padding-bottom:3rem;
-}.about .row .video-container{
+}
+.about .row .video-container{
         flex:1 1 40rem;
         position: relative;
     }
@@ -171,6 +172,4 @@ header .icons a
          padding-top:1rem;
          line-height: 1.5;
     }
-    section h1 .heading{
-        background: rgb(248, 220, 167);
-    } 
+    
