@@ -5,7 +5,7 @@
 
 🚀 A full-stack web application for campus food ordering — designed to help students and faculty order meals online, skip queues, and enjoy a smarter dining experience.
 
-![Campus Bite Banner]()
+
 
 </div>
 
@@ -51,8 +51,55 @@ It connects **students**, **faculty**, and **campus vendors** on a unified platf
 | **Database** | MySQL |
 | **Authentication** | JSON Web Tokens (JWT) |
 | **API Communication** | REST API (Axios / Fetch) |
+| **Development tools**| Visual Studio ,Live server|
 
 ---
 
 ## 🏗️ System Architecture
+[User Interface]
+↓
+Frontend
+↓
+Express REST API
+↓
+MySQL Database
 
+---
+
+## ⚙️ Installation Guide
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/<your-org>/campus-bite.git
+cd campus-bite
+campus-bite/
+│
+├── backend/
+│   ├── server.js
+│   ├── routes/
+│   │   ├── authRoutes.js
+│   │   ├── menuRoutes.js
+│   │   ├── orderRoutes.js
+│   ├── models/
+│   │   ├── User.js
+│   │   ├── MenuItem.js
+│   │   ├── Order.js
+│   └── config/
+│       └── db.js
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/   → Navbar, Hero, FoodCard, Footer
+│   │   ├── context/      → AuthContext, CartContext
+│   │   ├── pages/        → Home, Menu, Cart, Checkout, Login, Admin
+│   │   └── App.jsx
+│   └── public/
+│
+└── README.md
+
+<div align="center">
+🌟 Campus Bite — Simplifying Campus Dining, One Click at a Time!
+
+Made with ❤️ using HTML,CSS, Node.js, and MySQL
+
+</div> ```
