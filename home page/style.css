@@ -173,3 +173,120 @@ header .icons a
          line-height: 1.5;
     }
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @media(max-width:991px){
+        html{
+            font-size:55%;
+
+        }
+        header{
+            padding:2rem;
+        }
+        section{
+            padding: 2rem;
+        }
+        .home{
+            background-position:left;
+        }
+        .home
+    {
+        display:flex;
+        align-items: center;
+        min-height: 110vh;
+        background:url("/assets/hero.jpg") no-repeat;
+        background-size:cover;
+        background-position:center;
+    }}
+    @media(max-width:768px){
+        html .fa-bars{
+            display:block;
+        }
+        header .navbar{
+            position:absolute;
+            top:100%;right:0;left:0;
+            background:#eee;
+            border-top:.1rem solid rgba(0,0,0,0.1);
+            clip-path: polygon(0 0,100% 0,100% 0,0 0);
+        }
+        header #toggler:checked ~ .navbar{
+        clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+        }
+        .home{
+
+        display:flex;
+        align-items: center;
+        min-height: 110vh;
+        background:url("/assets/hero.jpg") ;
+        background-size:cover;
+        background-position:center;
+        }
+        header .navbar a{
+            margin:1.5rem;
+            padding:1.5rem;background:#fff;
+            border:1rem solid rgba(0,0,0,0.1);
+            display:block;
+        }
+        .home .content{
+            font-size: 5rem;
+            
+        }
+        .icon-conta .icons h3{
+    
+    font-size: 2rem;
+}
+.icon-conta .icons span{
+    
+    
+    font-size: 1.7rem;
+}
+
+        
+    }
+    @media(max-width:450px){
+        html{
+            font-size:50%;
+
+        }
+        .heading{
+            font-size: 3rem;
+        }
+    } 
