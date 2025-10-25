@@ -67,6 +67,13 @@ This layered design enhances scalability, security, and maintainability, making 
 ## ⚙️ Installation Guide
 git clone https://github.com/<your-org>/campus-bite.git
 cd campus-bite
+cd backend
+npm install
+npm start
+cd ../frontend
+npm install
+npm run dev
+
 
 ---
 <div align="center">
@@ -75,4 +82,4 @@ cd campus-bite
 Made with ❤️ using HTML,CSS, Node.js, and MySQL
 
 </div> 
----
+
