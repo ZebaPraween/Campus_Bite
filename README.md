@@ -66,18 +66,7 @@ This layered design enhances scalability, security, and maintainability, making 
 
 ## ⚙️ Installation Guide
 
-### 1️⃣ Clone the Repository
-```bash
-git clone https://github.com/<your-org>/campus-bite.git
-cd campus-bite
-campus-bite/
-cd backend
-npm install
-npm start
-cd ../frontend
-npm install
-npm run dev
----
+
 <div align="center">
 🌟 Campus Bite — Simplifying Campus Dining, One Click at a Time!
 
