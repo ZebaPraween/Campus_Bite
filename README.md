@@ -5,7 +5,7 @@
 
 🚀 A full-stack web application for campus food ordering — designed to help students and faculty order meals online, skip queues, and enjoy a smarter dining experience.
 
-![Campus Bite Banner](https://www.canva.com/design/DAG2xTapBVU/6IqfV3_ZlCtDCDW-vMho1Q/view?utm_content=DAG2xTapBVU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=heefdc31fa7)
+![Campus Bite Banner]()
 
 </div>
 
