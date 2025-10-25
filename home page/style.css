@@ -288,7 +288,7 @@ header .fa-bars {
     padding-top: 1rem;
     display: flex;
     margin-top: auto;
-    gap: 2.5rem; /* <<< FIXED: Was '25rem' */
+    gap: 25rem; 
     border-top: .1rem dashed rgba(0, 0, 0, .1);
 }
 
@@ -333,6 +333,7 @@ header .fa-bars {
     text-align: center;
     background: rgb(252, 242, 233);
     margin-top: 2rem;
+    border-top: .1rem dashed rgba(0, 0, 0, .1);
 }
 
 .footer .credit {
@@ -343,6 +344,11 @@ header .fa-bars {
 .footer .credit span {
     color: orange;
     font-weight: bold;
+    transition: .2s linear;
+}
+.footer .credit span:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
 }
 
 
