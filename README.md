@@ -65,8 +65,10 @@ This layered design enhances scalability, security, and maintainability, making 
 ---
 
 ## ⚙️ Installation Guide
+git clone https://github.com/<your-org>/campus-bite.git
+cd campus-bite
 
-
+---
 <div align="center">
 🌟 Campus Bite — Simplifying Campus Dining, One Click at a Time!
 
