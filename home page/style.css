@@ -108,7 +108,7 @@ header .icons a
         justify-content: center;
         align-items: center;
         min-height: 110vh;
-        background:url("ella-olsson-oPBjWBCcAEo-unsplash.jpg") no-repeat;
+        background:url("/assets/hero.jpg") no-repeat;
         background-size:cover;
         background-position:center;
 
