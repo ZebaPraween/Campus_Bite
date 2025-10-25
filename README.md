@@ -78,11 +78,10 @@ cd ../frontend
 npm install
 npm run dev
 ---
-
 <div align="center">
 🌟 Campus Bite — Simplifying Campus Dining, One Click at a Time!
 
 Made with ❤️ using HTML,CSS, Node.js, and MySQL
 
-</div> ```
+</div> 
 ---
