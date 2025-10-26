@@ -90,7 +90,7 @@ header .navbar a:hover
 {
     color:orange;
     transform: translateY(-3px); 
-    font-weight: bold;
+    
 }
 header .icons a
 {
@@ -196,6 +196,54 @@ header .icons a
          padding-top:1rem;
          line-height: 1.5;
     }
+    /* Today's Mess Menu Section */
+.mess-menu {
+  background: #f3f4f6;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+.section-title span {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #f5ac0d;
+  margin-bottom: 2rem;
+}
+.section-title  {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #0f0b02;
+  margin-bottom: 2rem;
+}
+.mess-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.mess-box {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 3rem;
+  border: goldenrod .1rem solid;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.mess-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.mess-box h3 {
+  color: #eebb30;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+.mess-box p {
+  color: #555;
+  font-size: 1.25rem;
+  margin: 0.3rem 0;
+}
+
     
     @media(max-width:991px){
         html{
