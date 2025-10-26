@@ -5,6 +5,7 @@
 
 🚀 A full-stack web application for campus food ordering — designed to help students and faculty order meals online, skip queues, and enjoy a smarter dining experience.
 
+<img width="3780" height="1890" alt="Campus (1)" src="https://github.com/user-attachments/assets/a1c71243-514c-4e46-96e2-a8902e8f35cd" />
 
 
 </div>
@@ -64,10 +65,76 @@ This layered design enhances scalability, security, and maintainability, making 
 
 ---
 
-## ⚙️ Installation Guide
+
+
+## 🛠️ Installation and Local Setup
+
+### ✅ Prerequisites
+- Node.js installed  
+- Visual Studio Code  
+- Live Server extension for VS Code  
+
+### ⚡ Setup Steps
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/Adityaa-Kumarr/dApp.git
+   cd dApp
+   ```
+
+2. **Configure Live Server for HTTPS**
+   - In VS Code, go to Settings.
+   - Search for Live Server HTTPS and check the box to enable it.
+     
+3.**Backend Setup**
+   - cd backend
+   - npm install
+   - npm start
+     
+4.**Frontend Setup**
+   - cd ../frontend
+   - npm install
+   - npm run dev
+     
+5.**Create the Database**
+      ```bash
+       CREATE DATABASE campus_bite;
+      ```
+       
+
+---
+## 🧠 Project Structure
+```
+campus-bite/
+│
+├── backend/              # Node.js + Express server
+│   ├── routes/           # API routes
+│   ├── models/           # Database models
+│   └── server.js
+│
+├── frontend/             # Frontend files
+│   ├── public/
+│   ├── src/
+│   └── package.json
+│
+└── README.md
+```
+
+---
+
+## Team Members
+**Zeba Praween ---> SBU2400120**
+
+**Samiksha Raj ---> SBU2400123**
+
+**Aditya Kumar ---> SBU2400414**
+
+**Alok Kumar Singh ---> SBU2400570**
 
 
 ---
+
+
 <div align="center">
 🌟 Campus Bite — Simplifying Campus Dining, One Click at a Time!
 
