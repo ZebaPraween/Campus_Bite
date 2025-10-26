@@ -1,7 +1,7 @@
 <div align="center">
 
-# 🍴 Campus Bite
-### _Online Campus Food Ordering System_
+# 🍴 Campus Bite: _Online Campus Food Ordering System_ 🍴
+
 
 🚀 A full-stack web application for campus food ordering — designed to help students and faculty order meals online, skip queues, and enjoy a smarter dining experience.
 
@@ -123,13 +123,13 @@ campus-bite/
 ---
 
 ## Team Members
-**Zeba Praween ---> SBU2400120**
+**_Zeba Praween_ ---> SBU2400120**
 
-**Samiksha Raj ---> SBU2400123**
+**_Samiksha Raj_ ---> SBU2400123**
 
-**Aditya Kumar ---> SBU2400414**
+**_Aditya Kumar_ ---> SBU2400414**
 
-**Alok Kumar Singh ---> SBU2400570**
+**_Alok Kumar Singh_ ---> SBU2400570**
 
 
 ---
