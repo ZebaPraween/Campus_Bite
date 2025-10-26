@@ -196,6 +196,7 @@ header .icons a
          padding-top:1rem;
          line-height: 1.5;
     }
+    
     @media(max-width:991px){
         html{
             font-size:55%;
