@@ -21,6 +21,19 @@ It connects **students**, **faculty**, and **campus vendors** on a unified platf
 
 ---
 
+
+## Team Members
+**_Zeba Praween_ ---> SBU2400120**
+
+**_Samiksha Raj_ ---> SBU2400123**
+
+**_Aditya Kumar_ ---> SBU2400414**
+
+**_Alok Kumar Singh_ ---> SBU2400570**
+
+
+---
+
 ## ✨ Key Features
 
 ### 👩‍🎓 For Users (Students & Faculty)
@@ -122,17 +135,6 @@ campus-bite/
 
 ---
 
-## Team Members
-**_Zeba Praween_ ---> SBU2400120**
-
-**_Samiksha Raj_ ---> SBU2400123**
-
-**_Aditya Kumar_ ---> SBU2400414**
-
-**_Alok Kumar Singh_ ---> SBU2400570**
-
-
----
 
 
 <div align="center">
