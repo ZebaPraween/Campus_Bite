@@ -97,10 +97,9 @@ This layered design enhances scalability, security, and maintainability, making 
    - npm run dev
      
 5.**Create the Database**
-
-      ```bash
-       CREATE DATABASE campus_bite;
-      ```
+```
+      CREATE DATABASE campus_bite;
+ ```
        
 
 ---
