@@ -82,7 +82,7 @@ This layered design enhances scalability, security, and maintainability, making 
 
 ## 🛠️ Installation and Local Setup
 
-### ✅ Prerequisites
+###  ✅ Prerequisites
 - Node.js installed  
 - Visual Studio Code  
 - Live Server extension for VS Code  
@@ -99,12 +99,12 @@ This layered design enhances scalability, security, and maintainability, making 
    - In VS Code, go to Settings.
    - Search for Live Server HTTPS and check the box to enable it.
      
-3.**Backend Setup**
+3. **Backend Setup**
    - cd backend
    - npm install
    - npm start
      
-4.**Frontend Setup**
+4. **Frontend Setup**
    - cd ../frontend
    - npm install
    - npm run dev
