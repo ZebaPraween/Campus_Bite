@@ -60,7 +60,9 @@ header
 {
     position:fixed;
     top:0;right:0;left:0;
-    background:#fff;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     padding:2rem 9%;
     display:flex;
     align-items: center;
@@ -353,6 +355,7 @@ header .icons a
             position:absolute;
             top:100%;right:0;left:0;
             background:#eee;
+            
             border-top:.1rem solid rgba(0,0,0,0.1);
             clip-path: polygon(0 0,100% 0,100% 0,0 0);
         }
