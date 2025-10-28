@@ -343,6 +343,7 @@ header .icons a
         background:url("/assets/hero.jpg") no-repeat;
         background-size:cover;
         background-position:center;
+        
     }}
     @media(max-width:768px){
         html .fa-bars{
@@ -362,10 +363,11 @@ header .icons a
 
         display:flex;
         align-items: center;
-        min-height: 110vh;
+        min-height: 70vh;
         background:url("/assets/hero.jpg") ;
         background-size:cover;
         background-position:center;
+        
         }
         header .navbar a{
             margin:1.5rem;
