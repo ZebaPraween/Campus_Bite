@@ -55,6 +55,25 @@ html
     scroll-padding-top: 6rem;
     overflow-x: hidden;
 }
+.search-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-box input{
+    
+    outline: none;
+    font-size: 14px;
+    background: none;
+}
+
+.search-box i{
+    position: absolute;
+    right: 8px;
+    color: #444;
+}
+
 header
 
 {
@@ -100,11 +119,15 @@ header .navbar a:hover
 }
 header .icons a
 {
+    margin-top: 1.5rem;
+    margin-right: 3rem;
+    
     font-size:2.5rem;
     color:#333;
     margin-left: 1.5rem;
     transition: .2s linear; 
 }
+
     header .icons a:hover{
         color:orange;
         transform: scale(1.2);
