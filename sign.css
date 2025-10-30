@@ -9,7 +9,7 @@
     text-transform: capitalize;
 }
 body {
-  background:url("img2.jpg")no-repeat;
+  background:url("/assets/sign_page_bg.jpg")no-repeat;
   background-size: cover;
   min-height: 100vh;
   font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
@@ -21,4 +21,22 @@ body {
 header {
   text-align: center;
   padding: 42px 0 20px 0;
+}
+.heading {
+  font-size: 2.7em;
+  color: #ff9800;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 0 0 2px 0;
+  text-shadow: 0 2px 15px #ffc36e50;
+  font-size: 3rem;
+    color:#fff;
+    font-weight:bolder;
+    transition: .2s linear;
+}
+.title {
+  font-size: 1.15em;
+  color: #ff9800b0;
+  margin-bottom: 18px;
+  font-weight: 500;
 }
