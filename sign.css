@@ -99,3 +99,27 @@ header {
 .slider.moveslider {
   left: 238px;
 }
+/* FORMS FLEX AND MOVE */
+.form-section {
+  display: flex;
+  transition: left 0.5s cubic-bezier(.7,.02,.85,1.02);
+  position: relative;
+  left: 0;
+  width: 860px;
+}
+
+.form-section.form-section-move {
+  left: -430px;
+}
+
+/* LOGIN & SIGNUP BOX STYLES */
+.login-box, .signup-box {
+  width: 430px;
+  padding: 55px 42px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  z-index: 2;
+  position: relative;
+  animation: fadeIn 1.2s;
+}
