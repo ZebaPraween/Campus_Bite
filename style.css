@@ -1,8 +1,5 @@
-
 *
-{
-
-    margin:0;
+{   margin:0;
     padding:0;
     box-sizing:border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -10,7 +7,6 @@
     outline:none;
     text-decoration: none;
     text-transform: capitalize;
-   
 }
 section{
      padding:2rem 9%;
@@ -22,14 +18,10 @@ section{
     padding:1rem;
     margin: 0 1rem;
     background:rgb(252, 242, 233);
-    
 }
-
 .heading span{
     color:orange;
-   
 }
-
 .btn{
     display: inline-block;
     margin-top: 1rem;
@@ -41,13 +33,11 @@ section{
     font-size:1.7rem;
     transition: .2s linear;
 }
-
 .btn:hover{
     background:orange;
     transform: translateY(-2px); 
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
 }
-
 html
 {
     font-size: 62.5%;
@@ -55,27 +45,7 @@ html
     scroll-padding-top: 6rem;
     overflow-x: hidden;
 }
-.search-box{
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.search-box input{
-    
-    outline: none;
-    font-size: 14px;
-    background: none;
-}
-
-.search-box i{
-    position: absolute;
-    right: 8px;
-    color: #444;
-}
-
 header
-
 {
     position:fixed;
     top:0;right:0;left:0;
@@ -88,7 +58,6 @@ header
     justify-content: space-between;
     z-index:1000;
     box-shadow: 0.5rem 1rem rgba(0,0,0,0.1);
-    
 }
 header .logo
 {
@@ -119,32 +88,28 @@ header .navbar a:hover
 }
 header .icons a
 {
-    margin-top: 1.5rem;
-    margin-right: 3rem;
-    
     font-size:2.5rem;
     color:#333;
-    margin-left: 1.5rem;
+    margin-left: 1rem;
     transition: .2s linear; 
 }
+header .icons a:hover{
+    color:orange;
+    transform: scale(1.2);
+}
+header #toggler{
+    display: none;
+}
+header .fa-bars{
+    font-size: 3rem;
+    color:#333;
+    border-radius:.5rem;
+    padding:.5rem 1.5rem;
+    cursor:pointer;
+    border:.1rem solid rgba(0,0,0,0.1);
+    display:none;
+}
 
-    header .icons a:hover{
-        color:orange;
-        transform: scale(1.2);
-         
-    }
-    header #toggler{
-        display: none;
-    }
-    header .fa-bars{
-        font-size: 3rem;
-        color:#333;
-        border-radius:.5rem;
-        padding:.5rem 1.5rem;
-        cursor:pointer;
-        border:.1rem solid rgba(0,0,0,0.1);
-        display:none;
-    }
 
     .home
     {
