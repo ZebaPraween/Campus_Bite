@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Campus-Bite Login/Register</title>
-  <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="sign.css">
 </head>
 <body>
   <header>
@@ -17,7 +17,24 @@
       <button class="login">Sign In</button>
       <button class="signup">Register</button>
     </div>
-    
-  <script src="script.js"></script>
+    <div class="form-section">
+      <!-- Sign In Form -->
+      <div class="login-box">
+        <input type="text" class="studentid ele" placeholder="SBU ID">
+        <input type="password" class="password ele" placeholder="Password">
+        <button class="clkbtn">Sign In</button>
+      </div>
+      <!-- Register Form -->
+      <div class="signup-box">
+        <input type="text" class="name ele" placeholder="Full Name">
+        <input type="text" class="studentid ele" placeholder="SBU ID">
+        <input type="email" class="email ele" placeholder="Email">
+        <input type="password" class="password ele" placeholder="Password">
+        <input type="password" class="password ele" placeholder="Confirm Password">
+        <button class="clkbtn">Register</button>
+      </div>
+    </div>
+  </div>
+  <script src="sign.js"></script>
 </body>
 </html>
