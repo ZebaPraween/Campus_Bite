@@ -40,3 +40,29 @@ header {
   margin-bottom: 18px;
   font-weight: 500;
 }
+/* GLASSMORPHIC CARD */
+.container {
+  position: relative;
+  width: 430px;
+  background: rgba(250, 232, 183, 0.8);
+  box-shadow: 0 8px 42px #ffb34730, 0 1.5px 0 #ffa00010;
+  backdrop-filter: blur(8.5px);
+  margin: 44px auto;
+  border-radius: 22px;
+  overflow: hidden;
+  min-height: 470px;
+  border: 2px solid #ffe0b2a5;
+  transition: box-shadow .4s;
+}
+.container:hover {
+  box-shadow: 0 16px 55px #ff980030, 0 4px 0 #ffa00010;
+}
+
+/* BUTTONS */
+.btn {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 52px 0 52px;
+  position: relative;
+  z-index: 10;
+}
