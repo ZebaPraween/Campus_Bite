@@ -1,0 +1,524 @@
+/* --- Global Styles (from style.css) --- */
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border:none;
+    outline:none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+section{
+     padding:2rem 9%;
+}
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color:#333;
+    padding:1rem;
+    margin: 0 1rem;
+    background:rgb(252, 242, 233);
+}
+.heading span{
+    color:orange;
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    color:#fff;
+    background: #333;
+    padding:.9rem 3.5rem;
+    cursor:pointer;
+    font-size:1.7rem;
+    transition: .2s linear;
+}
+.btn:hover{
+    background:orange;
+    transform: translateY(-2px); 
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+html
+{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+header
+{
+    position:fixed;
+    top:0;right:0;left:0;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding:2rem 9%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index:1000;
+    box-shadow: 0.5rem 1rem rgba(0,0,0,0.1);
+}
+header .logo
+{
+    font-size: 3rem;
+    color:#333;
+    font-weight:bolder;
+    transition: .2s linear;
+}
+header .logo:hover {
+    opacity: 0.7; 
+}
+header .logo span
+{
+    color:orange;
+}
+header .navbar a
+{
+    font-size:2rem;
+    padding:0 1.5rem;
+    color:#666;
+    transition: .2s linear;
+}
+header .navbar a:hover
+{
+    color:orange;
+    transform: translateY(-3px); 
+}
+header .icons a
+{
+    font-size:2.5rem;
+    color:#333;
+    margin-left: 1.5rem;
+    transition: .2s linear; 
+}
+header .icons a:hover{
+    color:orange;
+    transform: scale(1.2);
+}
+header #toggler{
+    display: none;
+}
+header .fa-bars{
+    font-size: 3rem;
+    color:#333;
+    border-radius:.5rem;
+    padding:.5rem 1.5rem;
+    cursor:pointer;
+    border:.1rem solid rgba(0,0,0,0.1);
+    display:none;
+}
+
+/* --- Home Section (from style.css) --- */
+.home
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 110vh;
+    background:url("https://placehold.co/1920x1080/ffe8d6/6b4f34?text=Campus+Bite") no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+.home h3{
+    font-size:5rem;
+    color:#333;
+}
+.home span{
+    font-size:3.5rem;
+    color:orange;
+    padding: 1rem 0;
+    line-height:1.5;
+}
+.home p{
+    font-size: 1.5rem;
+    color:#666;
+    padding:1rem 0;
+    line-height:1.5;
+}
+
+/* --- About Section (from style.css) --- */
+.about .row{
+    display:flex;
+    align-items: center;
+    gap:2rem;
+    flex-wrap: wrap;
+    padding:2rem 0;
+    padding-bottom:3rem;
+}
+.about .row .video-container{
+    flex:1 1 40rem;
+    position: relative;
+}
+.about .row .video-container video{
+    width:100%;
+    border:1.5rem solid #fff;
+    border-radius: .5rem;
+    box-shadow: 0.5rem 1rem rgba(0,0,0,0.1);
+    transition: .2s linear;
+}
+.about .row .video-container video:hover{
+    transform: scale(1.03);
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.2);
+}
+.about .row .video-container h3{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:3rem;
+    width:100% ;
+    padding: 1rem 2rem;
+    text-align: center;
+    mix-blend-mode:screen ;
+}
+.about .row .content{
+    flex: 1 1 40rem
+}
+.about .row .content h3{
+    font-size: 3rem;
+    color: #333;
+}
+.about .row .content p{
+    font-size:1.5rem;
+    color:#666;
+    padding: .5rem 0;
+    padding-top:1rem;
+    line-height: 1.5;
+}
+
+/* --- Mess Menu (from style.css) --- */
+.mess-menu, .indian-menu {
+  background: #f3f4f6;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+.section-title span {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #f5ac0d;
+  margin-bottom: 2rem;
+}
+.section-title  {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #0f0b02;
+  margin-bottom: 2rem;
+}
+.mess-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.mess-box {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 3rem;
+  border: goldenrod .1rem solid;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.mess-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.mess-box h3 {
+  color: #eebb30;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+.mess-box p {
+  color: #555;
+  font-size: 1.25rem;
+  margin: 0.3rem 0;
+}
+.mess-box .price {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-top: 0.5rem;
+}
+.mess-grid .btn {
+    font-size: 1.5rem;
+    padding: 0.8rem 2.5rem;
+}
+
+/* --- Dish Filter (from style.css) --- */
+.dish {
+    min-height: 100vh;
+}
+.dish .controls{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-wrap:wrap;
+    padding:2rem 0;
+    list-style:none;
+}
+.dish .controls .buttons{
+    margin: 1rem 2rem;
+    padding: .5rem 0;
+    color:#333;
+    cursor:pointer;
+    font-size:2rem;
+    text-align: center;
+    text-decoration: none;
+}
+.dish .controls .buttons.button-active ,
+.dish .controls .buttons:hover{
+    color:orange;
+    border-color: orange;
+}
+.dish .image-container{
+    display:flex;
+    align-items: center;
+    justify-items: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+.dish .image-container .image{
+    width: 25rem;
+    margin:2rem;
+    border:1rem solid #fff;
+    box-shadow: 0 .5rem .5rem rgba(0,0,0,.3);
+}
+.dish .controls .buttons .image img:hover{
+    transform:scale(1.08);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.dish .controls .buttons .image img{
+    padding:1rem; 
+    margin:2rem;
+    border:.15rem solid gold;
+    border-radius: 100%;
+    box-shadow: 0 .5rem .5rem rgba(0,0,0,.3);
+    height:20rem;
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    object-fit: cover;
+}
+.dish .image-container .image img{
+    height:20rem;
+    width:100%;
+    object-fit: cover;
+}
+.dish .image-container a{
+    font-size:2rem;
+    color:#333;
+    padding:.5rem;
+}
+.dish .image-container .image a:hover{
+    color: orange;
+}
+
+/* --- Contact Section (from style.css) --- */
+.contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+.contact .row form {
+    flex: 1 1 40rem;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 1rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+.contact .row form .box {
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    color: #333;
+    border: .1rem solid rgba(0,0,0,.1);
+    border-radius: .5rem;
+    text-transform: none;
+}
+.contact .row form textarea.box {
+    height: 15rem;
+    resize: vertical;
+}
+.contact .row form .btn {
+    font-size: 1.7rem;
+}
+.contact .row .contact-info {
+    flex: 1 1 30rem;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+.contact .row .contact-info h3 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+.contact .row .contact-info .info-items p {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.contact .row .contact-info .info-items p i {
+    color: orange;
+    font-size: 2rem;
+}
+.contact .row .contact-info .info-items p a {
+    color: #555;
+    text-decoration: none;
+    text-transform: none;
+    transition: color .2s linear;
+}
+.contact .row .contact-info .info-items p a:hover {
+    color: orange;
+}
+.contact .row .contact-info .socials {
+    margin-top: 2rem;
+}
+.contact .row .contact-info .socials a {
+    display: inline-block;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    background: #333;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    transition: background .2s linear, transform .2s linear;
+}
+.contact .row .contact-info .socials a:hover {
+    background: orange;
+    transform: translateY(-3px);
+}
+
+/* --- Media Queries (from style.css) --- */
+@media(max-width:991px){
+    html{
+        font-size:55%;
+    }
+    header{
+        padding:2rem;
+    }
+    section{
+        padding: 2rem;
+    }
+    .home{
+        background-position:left;
+    }
+    .home
+    {
+        display:flex;
+        align-items: center;
+        min-height: 110vh;
+        background:url("https://placehold.co/1920x1080/ffe8d6/6b4f34?text=Campus+Bite") no-repeat;
+        background-size:cover;
+        background-position:center;
+    }
+}
+@media(max-width:768px){
+    header .fa-bars{
+        display:block;
+    }
+    header .navbar{
+        position:absolute;
+        top:100%;right:0;left:0;
+        background:#eee;
+        border-top:.1rem solid rgba(0,0,0,0.1);
+        clip-path: polygon(0 0,100% 0,100% 0,0 0);
+        transition: clip-path .3s ease-in-out;
+    }
+    header #toggler:checked ~ .navbar{
+        clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+    }
+    .home{
+        display:flex;
+        align-items: center;
+        min-height: 70vh;
+        background:url("https://placehold.co/1920x1080/ffe8d6/6b4f34?text=Campus+Bite") ;
+        background-size:cover;
+        background-position:center;
+    }
+    header .navbar a{
+        margin:1.5rem;
+        padding:1.5rem;background:#fff;
+        border:1rem solid rgba(0,0,0,0.1);
+        display:block;
+    }
+    .home .content{
+        font-size: 5rem;
+    }
+}
+@media(max-width:450px){
+    html{
+        font-size:50%;
+    }
+    .heading{
+        font-size: 3rem;
+    }
+} 
+
+/* --- NEW Styles for Full Menu Page --- */
+
+.full-menu {
+    padding: 10rem 9% 2rem; /* 10rem top padding to clear fixed header */
+    background: #fdfdfd; /* A very light background */
+}
+
+.menu-category-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #333;
+    margin: 2.5rem 0 2rem; /* More margin-bottom */
+    padding-bottom: .5rem;
+    border-bottom: 2px solid orange;
+    display: inline-block; /* So border only spans text */
+}
+
+/* Override .mess-grid for this page to look better */
+.full-menu .mess-grid {
+    max-width: none; /* Allow it to be wider than the mess menu */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* A bit larger min-width */
+}
+
+/* Tweak .mess-box for a menu list feel */
+.full-menu .mess-box {
+    text-align: left; /* Align text to the left */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes button to bottom */
+}
+
+.full-menu .mess-box h3 {
+    font-size: 2rem; /* Slightly larger title */
+}
+
+.full-menu .mess-box p {
+    font-size: 1.4rem; /* Slightly smaller description */
+}
+
+.full-menu .mess-box .price {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.full-menu .btn {
+    width: 100%; /* Make button full width of the card */
+    text-align: center;
+    margin-top: 1.5rem; /* Ensure it has space */
+}
+
+/* Adjust padding for new .full-menu section in media queries */
+@media(max-width:991px){
+    .full-menu {
+        padding: 10rem 2rem 2rem; /* Adjust padding for smaller screens */
+    }
+}
