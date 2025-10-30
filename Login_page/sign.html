@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Campus-Bite Login/Register</title>
+  <link rel="stylesheet" href="sign.css">
+</head>
+<body>
+  <header>
+    <h1 class="heading"><span>Campus</span> Bite</h1>
+    <h3 class="title">Access Your Cafeteria Account</h3>
+  </header>
+  <div class="container">
+    <div class="slider"></div>
+    <div class="btn">
+      <button class="login">Sign In</button>
+      <button class="signup">Register</button>
+    </div>
+    <div class="form-section">
+      <!-- Sign In Form -->
+      <div class="login-box">
+        <input type="text" class="studentid ele" placeholder="SBU ID" required>
+        <input type="password" class="password ele" placeholder="Password"required>
+        <button class="clkbtn" id="loginSubmit">Sign In</button>
+
+      </div>
+      <!-- Register Form -->
+      <div class="signup-box">
+        <input type="text" class="name ele" placeholder="Full Name"required>
+        <input type="text" class="studentid ele" placeholder="SBU ID"required>
+        <input type="email" class="email ele" placeholder="Email"required>
+        <input type="password" class="password ele" placeholder="Password"required>
+        <input type="password" class="password ele" placeholder="Confirm Password"required>
+        <button class="clkbtn" id="registerSubmit">Register</button>
+
+      </div>
+    </div>
+  </div>
+  <script src="sign.js"></script>
+</body>
+</html>
+
