@@ -312,6 +312,92 @@ header .fa-bars{
         color: orange;
         
     }
+
+/* --- Contact Section (from style.css) --- */
+.contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+.contact .row form {
+    flex: 1 1 40rem;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 1rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+.contact .row form .box {
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    color: #333;
+    border: .1rem solid rgba(0,0,0,.1);
+    border-radius: .5rem;
+    text-transform: none;
+}
+.contact .row form textarea.box {
+    height: 15rem;
+    resize: vertical;
+}
+.contact .row form .btn {
+    font-size: 1.7rem;
+}
+.contact .row .contact-info {
+    flex: 1 1 30rem;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+.contact .row .contact-info h3 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+.contact .row .contact-info .info-items p {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.contact .row .contact-info .info-items p i {
+    color: orange;
+    font-size: 2rem;
+}
+.contact .row .contact-info .info-items p a {
+    color: #555;
+    text-decoration: none;
+    text-transform: none;
+    transition: color .2s linear;
+}
+.contact .row .contact-info .info-items p a:hover {
+    color: orange;
+}
+.contact .row .contact-info .socials {
+    margin-top: 2rem;
+}
+.contact .row .contact-info .socials a {
+    display: inline-block;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    background: #333;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    transition: background .2s linear, transform .2s linear;
+}
+.contact .row .contact-info .socials a:hover {
+    background: orange;
+    transform: translateY(-3px);
+}
+
     @media(max-width:991px){
         html{
             font-size:55%;
