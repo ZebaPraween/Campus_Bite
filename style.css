@@ -1,138 +1,480 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Campus Bite — Login / Register</title>
-  <link rel="stylesheet" href="menu.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <!-- Toast container -->
-
-  <div class="wrap">
-    <div class="card" role="application" aria-label="Campus Bite authentication card">
-      <!-- LEFT: forms -->
-      <div class="left" aria-hidden="false">
-        <div>
-          <div class="brand">
-            <div class="logo" aria-hidden="true">🍽️</div>
-            <div>
-              <div style="font-weight:700;font-size:20px">Campus Bite</div>
-              <div class="muted small">Order ahead — skip the line</div>
-            </div>
-          </div>
-
-          <div class="tabs" role="tablist" aria-label="Auth tabs">
-            <div id="tabSign" class="tab active" role="tab" aria-selected="true" tabindex="0">Sign In</div>
-            <div id="tabReg" class="tab" role="tab" aria-selected="false" tabindex="0">Register</div>
-          </div>
-        </div>
-
-        <div class="slider-wrap" id="sliderWrap">
-          <div class="forms" id="forms" aria-live="polite">
-            <!-- SIGN IN PANEL -->
-            <div class="panel" aria-labelledby="tabSign" role="region">
-              <div class="field">
-                <select id="role" class="input" aria-label="Role">
-                  <option value="student">Student</option>
-                  <option value="vendor">Vendor</option>
-                  <option value="admin">Admin</option>
-                </select>
-                <label class="flabel">Login as</label>
-              </div>
-
-              <div class="field">
-                <input id="signinEmail" class="input" type="email" placeholder=" " autocomplete="email" required>
-                <label class="flabel">Email / ID</label>
-              </div>
-
-              <div class="field" style="margin-bottom:4px">
-                <input id="signinPass" class="input" type="password" placeholder=" " autocomplete="current-password" required>
-                <label class="flabel">Password</label>
-                <span id="toggleSignEye" class="eye" role="button" aria-label="Toggle password">👁</span>
-              </div>
-
-              <div style="display:flex;justify-content:space-between;align-items:center;">
-                <label class="small"><input id="remember" type="checkbox"> Remember me</label>
-                <a href="#" class="small muted">Forgot password?</a>
-              </div>
-
-              <div>
-                <button id="registerBtn" class="btn ripple ghost" type="button">Sign in</button>
-              </div>
-
-              <div style="margin-top:4px" class="muted small center">
-                <div style="flex:1;height:1px;background:#f3f3f4;border-radius:2px"></div>
-                <div style="padding:0 8px">or</div>
-                <div style="flex:1;height:1px;background:#f3f3f4;border-radius:2px"></div>
-              </div>
-<section>
-              <div class="social-buttons">
-  <button class="btn fb">
-    <i class="fab fa-facebook-f"></i>
-    Continue with Facebook
-  </button>
-
-  <button class="btn google">
-    <img src="https://cdn-icons-png.flaticon.com/128/300/300221.png" alt="">
-    Continue with Google
-  </button>
-
-  <button class="btn apple">
-    <i class="fab fa-apple"></i>
-    Continue with Apple
-  </button>
-</div>
-</section>
-</div>
-
-            <!-- REGISTER PANEL -->
-            <div class="panel" aria-labelledby="tabReg" role="region">
-              <div class="field">
-                <input id="regName" class="input" type="text" placeholder=" " autocomplete="name" required>
-                <label class="flabel">Full Name</label>
-              </div>
-
-              <div class="field">
-                <input id="regEmail" class="input" type="email" placeholder=" " autocomplete="email" required>
-                <label class="flabel">Email</label>
-              </div>
-
-              <div class="field">
-                <input id="regPass" class="input" type="password" placeholder=" " autocomplete="new-password" required>
-                <label class="flabel">Create Password</label>
-                <span id="toggleRegEye" class="eye" role="button" aria-label="Toggle password">👁</span>
-              </div>
-
-              <div>
-                <button id="registerBtn" class="btn ripple ghost" type="button">Create Account</button>
-              </div>
-              <div class="muted small">By creating an account you agree to our terms.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- RIGHT: carousel -->
-      <div class="right" id="carouselRoot" aria-hidden="false">
-        <div class="arrow left" id="prev" role="button" aria-label="Previous slide">‹</div>
-        <div class="arrow right" id="next" role="button" aria-label="Next slide">›</div>
-
-        <div class="visual" id="visual" tabindex="0">
-          <img id="heroImg" alt="Delicious meal" src="https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=800&q=80">
-          <h3 id="heroTitle">Order Your Favorites</h3>
-          <p id="heroDesc" class="muted">Fresh food delivered on campus — fast.</p>
-          <div class="dots" id="dots" aria-hidden="false"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<script src="script.js"></script>
+*
+{   margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border:none;
+    outline:none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+section{
+     padding:2rem 9%;
+}
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color:#333;
+    padding:1rem;
+    margin: 0 1rem;
+    background:rgb(252, 242, 233);
+}
+.heading span{
+    color:orange;
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    color:#fff;
+    background: #333;
+    padding:.9rem 3.5rem;
+    cursor:pointer;
+    font-size:1.7rem;
+    transition: .2s linear;
+}
+.btn:hover{
+    background:orange;
+    transform: translateY(-2px); 
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+html
+{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+header
+{
+    position:fixed;
+    top:0;right:0;left:0;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding:2rem 9%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index:1000;
+    box-shadow: 0.5rem 1rem rgba(0,0,0,0.1);
+}
+header .logo
+{
+    font-size: 3rem;
+    color:#333;
+    font-weight:bolder;
+    transition: .2s linear;
+}
+header .logo:hover {
+    opacity: 0.7; 
+}
+header .logo span
+{
+    color:orange;
+}
+header .navbar a
+{
+    font-size:2rem;
+    padding:0 1.5rem;
+    color:#666;
+    transition: .2s linear;
+}
+header .navbar a:hover
+{
+    color:orange;
+    transform: translateY(-3px); 
+    
+}
+header .icons a
+{
+    font-size:2.5rem;
+    color:#333;
+    margin-left: 1rem;
+    transition: .2s linear; 
+}
+header .icons a:hover{
+    color:orange;
+    transform: scale(1.2);
+}
+header #toggler{
+    display: none;
+}
+header .fa-bars{
+    font-size: 3rem;
+    color:#333;
+    border-radius:.5rem;
+    padding:.5rem 1.5rem;
+    cursor:pointer;
+    border:.1rem solid rgba(0,0,0,0.1);
+    display:none;
+}
 
 
-</body>
-</html>
+    .home
+    {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 110vh;
+        background:url("/assets/hero.jpg") no-repeat;
+        background-size:cover;
+        background-position:center;
+    }
+
+    .home h3{
+        font-size:5rem;
+        color:#333;
+    }
+
+    .home span{
+        font-size:3.5rem;
+        color:orange;
+        padding: 1rem 0;
+        line-height:1.5;
+    }
+
+    .home p{
+        font-size: 1.5rem;
+        color:#999;
+        padding:1rem 0;
+        line-height:1.5;
+    }
+.about .row{
+    display:flex;
+    align-items: center;
+    gap:2rem;
+    flex-wrap: wrap;
+    padding:2rem 0;
+    padding-bottom:3rem;
+}
+
+.about .row .video-container{
+        flex:1 1 40rem;
+        position: relative;
+    }
+     .about .row .video-container video{
+        width:100%;
+        border:1.5rem solid #fff;
+        border-radius: .5rem;
+        box-shadow: 0.5rem 1rem rgba(0,0,0,0.1);
+        transition: .2s linear;
+    }
+    .about .row .video-container video:hover{
+        transform: scale(1.03);
+        box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.2);
+    }
+
+     .about .row .video-container h3{
+        position:absolute;
+        top:50%;
+        transform:translateY(-50%);
+        font-size:3rem;
+        width:100% ;
+        padding: 1rem 2rem;
+        text-align: center;
+        mix-blend-mode:screen ;
+    }
+    .about .row .content{
+        flex: 1 1 40rem
+     }
+     .about .row .content h3{
+        font-size: 3rem;
+        color: #333;
+     }
+
+    .about .row .content p{
+        font-size:1.5rem;
+         color:#999;
+         padding: .5rem 0;
+         padding-top:1rem;
+         line-height: 1.5;
+    }
+    /* Today's Mess Menu Section */
+.mess-menu {
+  background: #f3f4f6;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+.section-title span {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #f5ac0d;
+  margin-bottom: 2rem;
+}
+.section-title  {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #0f0b02;
+  margin-bottom: 2rem;
+}
+.mess-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.mess-box {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 3rem;
+  border: goldenrod .1rem solid;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.mess-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.mess-box h3 {
+  color: #eebb30;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+.mess-box p {
+  color: #555;
+  font-size: 1.25rem;
+  margin: 0.3rem 0;
+}
+
+.dish {
+    min-height: 100vh;
+}
+.dish .controls{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-wrap:wrap;
+    padding:2rem 0;
+    list-style:none;
+}
+.dish .controls .buttons{
+    margin: 1rem 2rem;
+    padding: .5rem 0;
+    
+    color:#333;
+    cursor:pointer;
+    font-size:2rem;
+    text-align: center;
+    text-decoration: none;
+}
+.dish .controls .buttons.button-active ,
+.dish .controls .buttons:hover{
+    color:orange;
+    border-color: orange;
+}
+.dish .image-container{
+    display:flex;
+    align-items: center;
+    justify-items: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    
+}
+.dish .image-container .image{
+    width: 25rem;
+    margin:2rem;
+    border:1rem solid #fff;
+    box-shadow: 0 .5rem .5rem rgba(0,0,0,.3);
+}
+.dish .controls .buttons .image img:hover{
+    transform:scale(1.08);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.dish .controls .buttons .image img{
+    
+    padding:1rem; 
+    margin:2rem;
+    border:.15rem solid gold;
+    border-radius: 100%;
+    box-shadow: 0 .5rem .5rem rgba(0,0,0,.3);
+    height:20rem;
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    object-fit: cover;
+    
+}
+
+.dish .image-container .image img{
+    height:20rem;
+    width:100%;
+    object-fit: cover;
+    
+}
+    .dish .image-container a{
+      font-size:2rem;
+      color:#333;
+      padding:.5rem;
+    }
+    .dish .image-container .image a:hover{
+        color: orange;
+        
+    }
+
+/* --- Contact Section (from style.css) --- */
+.contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+.contact .row form {
+    flex: 1 1 40rem;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 1rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+.contact .row form .box {
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    color: #333;
+    border: .1rem solid rgba(0,0,0,.1);
+    border-radius: .5rem;
+    text-transform: none;
+}
+.contact .row form textarea.box {
+    height: 15rem;
+    resize: vertical;
+}
+.contact .row form .btn {
+    font-size: 1.7rem;
+}
+.contact .row .contact-info {
+    flex: 1 1 30rem;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+.contact .row .contact-info h3 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+.contact .row .contact-info .info-items p {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.contact .row .contact-info .info-items p i {
+    color: orange;
+    font-size: 2rem;
+}
+.contact .row .contact-info .info-items p a {
+    color: #555;
+    text-decoration: none;
+    text-transform: none;
+    transition: color .2s linear;
+}
+.contact .row .contact-info .info-items p a:hover {
+    color: orange;
+}
+.contact .row .contact-info .socials {
+    margin-top: 2rem;
+}
+.contact .row .contact-info .socials a {
+    display: inline-block;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    background: #333;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    transition: background .2s linear, transform .2s linear;
+}
+.contact .row .contact-info .socials a:hover {
+    background: orange;
+    transform: translateY(-3px);
+}
+
+    @media(max-width:991px){
+        html{
+            font-size:55%;
+
+        }
+        header{
+            padding:2rem;
+        }
+        section{
+            padding: 2rem;
+        }
+        .home{
+            background-position:left;
+        }
+        .home
+    {
+        display:flex;
+        align-items: center;
+        min-height: 110vh;
+        background:url("/assets/hero.jpg") no-repeat;
+        background-size:cover;
+        background-position:center;
+        
+    }}
+    @media(max-width:768px){
+        html .fa-bars{
+            display:block;
+        }
+        header .navbar{
+            position:absolute;
+            top:100%;right:0;left:0;
+            background:#eee;
+            
+            border-top:.1rem solid rgba(0,0,0,0.1);
+            clip-path: polygon(0 0,100% 0,100% 0,0 0);
+        }
+        header #toggler:checked ~ .navbar{
+        clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+        }
+        .home{
+
+        display:flex;
+        align-items: center;
+        min-height: 70vh;
+        background:url("/assets/hero.jpg") ;
+        background-size:cover;
+        background-position:center;
+        
+        }
+        header .navbar a{
+            margin:1.5rem;
+            padding:1.5rem;background:#fff;
+            border:1rem solid rgba(0,0,0,0.1);
+            display:block;
+        }
+        .home .content{
+            font-size: 5rem;
+            
+        }
+        .icon-conta .icons h3{
+    
+    font-size: 2rem;
+}
+.icon-conta .icons span{
+    
+    
+    font-size: 1.7rem;
+}
+
+        
+    }
+    @media(max-width:450px){
+        html{
+            font-size:50%;
+
+        }
+        .heading{
+            font-size: 3rem;
+        }
+    } 

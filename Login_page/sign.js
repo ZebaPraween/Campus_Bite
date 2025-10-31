@@ -1,14 +1,139 @@
-const loginBtn = document.querySelector('.login');
-const signupBtn = document.querySelector('.signup');
-const slider = document.querySelector('.slider');
-const formSection = document.querySelector('.form-section');
+/* -------------------------
+   Ripple effect (kept)
+   ------------------------- */
+document.addEventListener('click', (e) => {
+  const el = e.target.closest('.ripple');
+  if(!el) return;
+  const rect = el.getBoundingClientRect();
+  const span = document.createElement('span');
+  const d = Math.max(rect.width, rect.height);
+  span.style.width = span.style.height = d + 'px';
+  span.style.left = (e.clientX - rect.left - d/2) + 'px';
+  span.style.top = (e.clientY - rect.top - d/2) + 'px';
+  el.appendChild(span);
+  setTimeout(()=> span.remove(), 700);
+});
 
-signupBtn.onclick = () => {
-  slider.classList.add('moveslider');
-  formSection.classList.add('form-section-move');
-};
+/* -------------------------
+   Tabs: Sign In / Register
+   ------------------------- */
+const tabSign = document.getElementById('tabSign');
+const tabReg  = document.getElementById('tabReg');
+const formsEl = document.getElementById('forms');
 
-loginBtn.onclick = () => {
-  slider.classList.remove('moveslider');
-  formSection.classList.remove('form-section-move');
-};
+function switchTo(which) {
+  if(which === 'sign') {
+    formsEl.style.transform = 'translateX(0%)';
+    tabSign.classList.add('active'); tabReg.classList.remove('active');
+  } else {
+    formsEl.style.transform = 'translateX(-50%)';
+    tabReg.classList.add('active'); tabSign.classList.remove('active');
+  }
+}
+tabSign.addEventListener('click', () => switchTo('sign'));
+tabReg.addEventListener('click', () => switchTo('reg'));
+
+/* -------------------------
+   Show/Hide password icons
+   ------------------------- */
+document.getElementById('toggleSignEye').addEventListener('click', () => {
+  const p = document.getElementById('signinPass');
+  p.type = p.type === 'password' ? 'text' : 'password';
+});
+document.getElementById('toggleRegEye').addEventListener('click', () => {
+  const p = document.getElementById('regPass');
+  p.type = p.type === 'password' ? 'text' : 'password';
+});
+
+/* -------------------------
+   Remember Me
+   ------------------------- */
+const remember = document.getElementById('remember');
+const signinEmail = document.getElementById('signinEmail');
+try {
+  const saved = localStorage.getItem('campusbite_remember_email');
+  if(saved) { signinEmail.value = saved; remember.checked = true; }
+} catch(e){}
+
+/* -------------------------
+   Sign In / Register (Simulation)
+   ------------------------- */
+function showLoader(btn, text) {
+  btn.disabled = true;
+  const old = btn.innerHTML;
+  btn.innerHTML = `<span class="loader"></span> ${text}`;
+  return () => { btn.innerHTML = old; btn.disabled = false; }
+}
+
+document.getElementById('signinBtn').addEventListener('click', () => {
+  const email = signinEmail.value.trim();
+  const pw = document.getElementById('signinPass').value;
+
+  if(!email || !pw) return;
+
+  try {
+    if(remember.checked) localStorage.setItem('campusbite_remember_email', email);
+    else localStorage.removeItem('campusbite_remember_email');
+  } catch(e){}
+
+  const restore = showLoader(signinBtn, "Signing In...");
+  setTimeout(() => restore(), 1200);
+});
+
+document.getElementById('registerBtn').addEventListener('click', () => {
+  const name = document.getElementById('regName').value.trim();
+  const email = document.getElementById('regEmail').value.trim();
+  const pw = document.getElementById('regPass').value;
+
+  if(!name || !email || pw.length < 6) return;
+
+  const restore = showLoader(registerBtn, "Creating...");
+  setTimeout(() => {
+    restore();
+    switchTo('sign');
+    signinEmail.value = email;
+  }, 1500);
+});
+
+/* -------------------------
+   Carousel
+   ------------------------- */
+const images = [
+  { src: 'https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=1200&q=80', title:'Order Your Favorites', desc:'Fresh food delivered on campus — fast.' },
+  { src: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80', title:'Snacks & Coffee', desc:'Perfect study break combos.' },
+  { src: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80', title:'Combo Offers', desc:'Save with weekly combos.' }
+];
+
+let cIndex = 0, cTimer = null;
+const heroImg = document.getElementById('heroImg');
+const heroTitle = document.getElementById('heroTitle');
+const heroDesc = document.getElementById('heroDesc');
+const dotsWrap = document.getElementById('dots');
+
+function buildDots(){
+  dotsWrap.innerHTML = '';
+  images.forEach((_,i) => {
+    const d = document.createElement('button');
+    d.className = 'dot';
+    d.addEventListener('click', ()=> { showSlide(i); restart(); });
+    dotsWrap.appendChild(d);
+  });
+}
+function showSlide(i){
+  cIndex = (i + images.length) % images.length;
+  heroImg.src = images[cIndex].src;
+  heroTitle.textContent = images[cIndex].title;
+  heroDesc.textContent = images[cIndex].desc;
+  [...dotsWrap.children].forEach((b,j)=>b.classList.toggle('active', j===cIndex));
+}
+function next(){ showSlide(cIndex+1); }
+function prev(){ showSlide(cIndex-1); }
+function start(){ cTimer = setInterval(()=>next(),3500); }
+function stop(){ clearInterval(cTimer); cTimer=null; }
+function restart(){ stop(); start(); }
+
+buildDots();
+showSlide(0);
+start();
+document.getElementById('next').onclick = ()=>{ next(); restart(); };
+document.getElementById('prev').onclick = ()=>{ prev(); restart(); };
