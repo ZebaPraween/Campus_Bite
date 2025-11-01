@@ -82,7 +82,7 @@ document.getElementById('signinBtn').addEventListener('click', () => {
 
 document.getElementById('registerBtn').addEventListener('click', () => {
   const name = document.getElementById('regName').value.trim();
-  const email = document.getElementById('regEmail').value.trim();
+  const id = document.getElementById('regid').value.trim();
   const pw = document.getElementById('regPass').value;
 
   if(!name || !email || pw.length < 6) return;
