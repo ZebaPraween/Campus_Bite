@@ -59,9 +59,16 @@
     /* small form layout */
     select.input{appearance:none; background-image:linear-gradient(45deg,transparent 50%, #999 50%), linear-gradient(135deg, #999 50%, transparent 50%); background-position:calc(100% - 16px) calc(1em + 2px), calc(100% - 12px) calc(1em + 2px); background-size:6px 6px,6px 6px; background-repeat:no-repeat}
     .row{display:flex; gap:12px}
-    .ghost{margin-left: 11rem;
-      border:1px solid #e6e6ea; color:#111827}
-
+    #createAccBtn,#signInBtn{margin-left: 10rem; height: 3rem;
+      width: 10rem;font-weight: 700;
+      border-radius: 2rem;background: #040200;
+      color: #fff;
+      border:1px solid #e6e6ea; transition: .2s linear;}
+    #createAccBtn:hover,#signInBtn:hover{
+      background:orange;
+    transform: translateY(-2px); 
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    }
     /* eye toggle */
     .eye{position:absolute; right:10px; top:12px; cursor:pointer; font-size:14px; color:var(--muted)}
      
@@ -127,7 +134,12 @@
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: 2s ease;
+  transition: .2s ease;
+}
+.btn{
+  transform: translateX(1.05); 
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    
 }
 
 .btn i, .btn img {

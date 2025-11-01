@@ -20,7 +20,7 @@
           <div class="brand">
             <div class="logo" aria-hidden="true">🍽️</div>
             <div>
-              <div style="font-weight:700;font-size:20px">Campus Bite</div>
+              <div style="font-weight:700;font-size:20px"><span>Campus</span> Bite</div>
               <div class="muted small">Order ahead — skip the line</div>
             </div>
           </div>
@@ -45,8 +45,8 @@
               </div>
 
               <div class="field">
-                <input id="signinEmail" class="input" type="email" placeholder=" " autocomplete="email" required>
-                <label class="flabel">Email / ID</label>
+                <input id="loginID" class="input" type="text" placeholder=" " autocomplete="off" required>
+<label class="flabel" >SBU ID</label>
               </div>
 
               <div class="field" style="margin-bottom:4px">
@@ -61,7 +61,8 @@
               </div>
 
               <div>
-                <button id="registerBtn" class="btn ripple ghost" type="button">Sign in</button>
+                <button id="signInBtn">Sign in</button>
+
               </div>
 
               
@@ -76,7 +77,7 @@
               </div>
 
               <div class="field">
-                <input id="regid" class="input" type="text" placeholder=" " autocomplete="off" required>
+                <input id="regID" class="input" type="text" placeholder=" " autocomplete="off" required>
 <label class="flabel" >SBU ID</label>
 
               </div>
@@ -88,13 +89,14 @@
               </div>
 
               <div>
-                <button id="registerBtn" class="btn ripple ghost" type="button">Create Account</button>
+                <button id="createAccBtn">Create Account</button>
+
               </div><div style="margin-top:4px" class="muted small center">
                 <div style="flex:1;height:1px;background:#f3f3f4;border-radius:2px"></div>
                 <div style="padding:0 8px">or</div>
                 <div style="flex:1;height:1px;background:#f3f3f4;border-radius:2px"></div>
               </div>
-                 <section>
+                 
               <div class="social-buttons">
   <button class="btn fb">
     <i class="fab fa-facebook-f"></i>
@@ -111,7 +113,7 @@
     Continue with Apple
   </button>
 </div>
-</section>
+
               <div class="muted small">By creating an account you agree to our terms.</div>
             </div>
           </div>
@@ -124,6 +126,7 @@
         <div class="arrow right" id="next" role="button" aria-label="Next slide">›</div>
 
         <div class="visual" id="visual" tabindex="0">
+          
           <img id="heroImg" alt="Delicious meal" src="https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=800&q=80">
           <h3 id="heroTitle">Order Your Favorites</h3>
           <p id="heroDesc" class="muted">Fresh food delivered on campus — fast.</p>
