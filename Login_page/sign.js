@@ -101,7 +101,7 @@ createAccBtn.addEventListener('click', () => {
    Carousel
    ------------------------- */
 const images = [
-  { src: 'https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=1200&q=80', title:'Order Your Favorites', desc:'Fresh food delivered on campus — fast.' },
+  { src: 'https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHJlc3RhdXJhbnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=900', title:'Order Your Favorites', desc:'Fresh food delivered on campus — fast.' },
   { src: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80', title:'Snacks & Coffee', desc:'Perfect study break combos.' },
   { src: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80', title:'Combo Offers', desc:'Save with weekly combos.' }
 ];
