@@ -1,5 +1,5 @@
 /* -------------------------
-   Ripple effect (kept)
+   Ripple effect
    ------------------------- */
 document.addEventListener('click', (e) => {
   const el = e.target.closest('.ripple');
@@ -15,7 +15,7 @@ document.addEventListener('click', (e) => {
 });
 
 /* -------------------------
-   Tabs: Sign In / Register
+   Tabs
    ------------------------- */
 const tabSign = document.getElementById('tabSign');
 const tabReg  = document.getElementById('tabReg');
@@ -34,7 +34,7 @@ tabSign.addEventListener('click', () => switchTo('sign'));
 tabReg.addEventListener('click', () => switchTo('reg'));
 
 /* -------------------------
-   Show/Hide password icons
+   Show/Hide passwords
    ------------------------- */
 document.getElementById('toggleSignEye').addEventListener('click', () => {
   const p = document.getElementById('signinPass');
@@ -49,14 +49,14 @@ document.getElementById('toggleRegEye').addEventListener('click', () => {
    Remember Me
    ------------------------- */
 const remember = document.getElementById('remember');
-const signinEmail = document.getElementById('signinEmail');
+const signinID = document.getElementById('loginID');
 try {
-  const saved = localStorage.getItem('campusbite_remember_email');
-  if(saved) { signinEmail.value = saved; remember.checked = true; }
+  const saved = localStorage.getItem('campusbite_remember_id');
+  if(saved) { signinID.value = saved; remember.checked = true; }
 } catch(e){}
 
 /* -------------------------
-   Sign In / Register (Simulation)
+   Simulated Sign In / Register
    ------------------------- */
 function showLoader(btn, text) {
   btn.disabled = true;
@@ -65,33 +65,35 @@ function showLoader(btn, text) {
   return () => { btn.innerHTML = old; btn.disabled = false; }
 }
 
-document.getElementById('signinBtn').addEventListener('click', () => {
-  const email = signinEmail.value.trim();
+const signInBtn = document.getElementById('signInBtn');
+signInBtn.addEventListener('click', () => {
+  const id = signinID.value.trim();
   const pw = document.getElementById('signinPass').value;
 
-  if(!email || !pw) return;
+  if(!id || !pw) return;
 
   try {
-    if(remember.checked) localStorage.setItem('campusbite_remember_email', email);
-    else localStorage.removeItem('campusbite_remember_email');
+    if(remember.checked) localStorage.setItem('campusbite_remember_id', id);
+    else localStorage.removeItem('campusbite_remember_id');
   } catch(e){}
 
-  const restore = showLoader(signinBtn, "Signing In...");
+  const restore = showLoader(signInBtn, "Signing In...");
   setTimeout(() => restore(), 1200);
 });
 
-document.getElementById('registerBtn').addEventListener('click', () => {
+const createAccBtn = document.getElementById('createAccBtn');
+createAccBtn.addEventListener('click', () => {
   const name = document.getElementById('regName').value.trim();
-  const id = document.getElementById('regid').value.trim();
+  const id = document.getElementById('regID').value.trim();
   const pw = document.getElementById('regPass').value;
 
-  if(!name || !email || pw.length < 6) return;
+  if(!name || !id || pw.length < 6) return;
 
-  const restore = showLoader(registerBtn, "Creating...");
+  const restore = showLoader(createAccBtn, "Creating...");
   setTimeout(() => {
     restore();
     switchTo('sign');
-    signinEmail.value = email;
+    signinID.value = id;
   }, 1500);
 });
 
@@ -137,3 +139,18 @@ showSlide(0);
 start();
 document.getElementById('next').onclick = ()=>{ next(); restart(); };
 document.getElementById('prev').onclick = ()=>{ prev(); restart(); };
+function showSlide(i){
+  cIndex = (i + images.length) % images.length;
+  heroImg.src = images[cIndex].src;
+  heroTitle.textContent = images[cIndex].title;
+  heroDesc.textContent = images[cIndex].desc;
+
+  // ✨ Restart fade animation on slide change
+  [heroImg, heroTitle, heroDesc].forEach(el => {
+    el.classList.add('fade-reset');
+    void el.offsetWidth; // force reflow
+    el.classList.remove('fade-reset');
+  });
+
+  [...dotsWrap.children].forEach((b,j)=>b.classList.toggle('active', j===cIndex));
+}

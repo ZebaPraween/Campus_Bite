@@ -25,8 +25,11 @@
     .right{width:52%; padding:32px; background: #fff7ed; position:relative; display:flex; align-items:center; justify-content:center; overflow:hidden}
 
     /* brand & tabs */
+    .head{
+      color:orange;
+    }
     .brand{display:flex; gap:12px; align-items:center; margin-bottom:18px}
-    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#ffb86b,#ff8a3d);display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px}
+    
     .tabs{display:flex; gap:20px; border-bottom:1px solid #f3f4f6; padding-bottom:8px}
     .tab{cursor:pointer; padding-bottom:6px; font-weight:600; color:var(--muted); font-size:18px}
     .tab.active{color:var(--accent); position:relative}
@@ -79,15 +82,34 @@
 
     
     /* right carousel */
-    .visual{max-width:420px; text-align:center; position:relative}
-    .visual img{width:280px; height:280px; border-radius:999px; object-fit:cover; transition:opacity .45s ease, transform .45s cubic-bezier(.2,.9,.2,1)}
-    .visual img.fade{opacity:0; transform:scale(.98)}
-    .visual h3{margin:14px 0 6px; font-size:20px}
-    .visual p{color:var(--muted); margin:0 8px}
-
+    .visual{
+      max-width:420px; 
+      text-align:center;
+       position:relative
+      }
+    .visual img{
+      width:20rem; 
+      height:20rem; 
+      
+      border-radius:999px; 
+      object-fit:cover; 
+      transition:opacity .45s ease, transform .45s cubic-bezier(.2,.9,.2,1)
+    }
+    .visual img.fade{
+      opacity:0; 
+      transform:scale(.98)
+    }
+    .visual h3{
+      margin:14px 0 6px; 
+      font-size:20px
+    }
+    .visual p{
+      color:var(--muted);
+       margin:0 8px
+      }
     .dots{display:flex; gap:8px; justify-content:center; margin-top:12px}
-    .dot{width:12px; height:12px; border-radius:999px; background:#ffedd5; border:0; opacity:.55; cursor:pointer}
-    .dot.active{background:var(--accent); opacity:1; box-shadow:0 8px 18px rgba(234,88,12,0.12)}
+    .dot{width:12px; height:12px; border-radius:999px; background:#ffd7a4; border:0; opacity:.55; cursor:pointer}
+    .dot.active{background:var(--accent); opacity:1; box-shadow:0 8px 18px rgb(255, 165, 0)}
 
     .arrow{position:absolute; top:50%; transform:translateY(-50%); background:#fff; border-radius:999px; width:46px; height:46px; display:flex; align-items:center; justify-content:center; box-shadow:0 8px 24px rgba(0,0,0,0.12); cursor:pointer; font-size:20px; user-select:none}
     .arrow.left{left:14px} .arrow.right{right:14px}
@@ -103,7 +125,7 @@
 
     /* small helpers */
     .muted{color:var(--muted); font-size:13px}
-    .small{font-size:13px}
+    .small{font-size:1rem ;text-align:center ;}
     .inline{display:inline-block}
     .hidden{display:none}
     .spacer{height:6px}
@@ -178,4 +200,30 @@
 /* optional smooth hover pop */
 .btn:hover {
   transform: translateY(-2px);
+}
+/* Fade + Float Animation */
+@keyframes fadeFloat {
+  0%   { opacity: 0; transform: translateY(18px); }
+  40%  { opacity: 1; transform: translateY(0px); }
+  100% { opacity: 1; transform: translateY(-6px); }
+}
+
+/* Light continuous floating after fade-in */
+@keyframes gentleFloat {
+  0%   { transform: translateY(-6px); }
+  50%  { transform: translateY(6px); }
+  100% { transform: translateY(-6px); }
+}
+
+/* Apply to hero image & text */
+#heroImg,
+#heroTitle,
+#heroDesc {
+  opacity: 0;
+  animation: fadeFloat 0.9s ease forwards, gentleFloat 4s ease-in-out infinite;
+}
+
+/* Make the fade reset each slide change */
+.fade-reset {
+  animation: none !important;
 }
