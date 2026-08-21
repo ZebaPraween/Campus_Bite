@@ -29,8 +29,6 @@ It connects **students**, **faculty**, and **campus vendors** on a unified platf
 
 **_Aditya Kumar_ ---> SBU2400414**
 
-**_Alok Kumar Singh_ ---> SBU2400570**
-
 
 ---
 
